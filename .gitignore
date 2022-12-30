@@ -20,3 +20,11 @@
 
 # update INI backups
 sim/*.old
+
+# Eclipse IDE project files
+.project
+.pydevproject
+
+# Other
+
+other
