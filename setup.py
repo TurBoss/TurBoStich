@@ -4,23 +4,23 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="myvcp",
+    name="turbostich",
     version="0.0.1",
-    author="John Doe",
-    author_email="<doe.john@example.com>",
-    description="MyVCP - A QtPyVCP based Virtual Control Panel for LinuxCNC",
+    author="TurBoss",
+    author_email="<j.l.toledano.l@gmail.com>",
+    description="turbostich - Embroider Virtual Control Panel for LinuxCNC",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/USERNAME/REPO",
-    download_url="https://github.com/USERNAME/REPO/tarball/master",
+    url="https://github.com/TurBoss/TurBoStich",
+    download_url="https://github.com/TurBoss/TurBoStich/tarball/master",
     packages=find_packages(),
     include_package_data=True,
     entry_points={
         'gui_scripts': [
-            'myvcp=myvcp:main',
+            'turbostich=turbostich:main',
         ],
         'qtpyvcp.vcp': [
-            'myvcp=myvcp',
+            'turbostich=turbostich',
         ],
     },
 )
