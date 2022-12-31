@@ -9,6 +9,7 @@ set ::watchlist {
     pin+halui.mdi-command-02
     pin+halui.mdi-command-03
     pin+halui.mdi-command-00
+    pin+comp-offset.in
 }
 set ::workmode watchhal
 set ::watchInterval 100
