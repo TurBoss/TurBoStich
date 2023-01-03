@@ -6,10 +6,10 @@ qtdesigner:
   qss_file: ( application.kwargs.stylesheet )
 
 vcp:
-  name: sg_cnc-sg
+  name: TurBoStich
   version: v0.0.1
   author: TurBoss
-  description: SG CNC Surface Grinder
+  description: Embroider Virtual Control Panel for LinuxCNC
 
 data_plugins:
   status:
@@ -19,7 +19,7 @@ data_plugins:
 application:
   kwargs:
     # Specify the application wide stylesheet.
-    stylesheet: {{ file.dir }}/style.qss
+    stylesheet: {{ file.dir }}/ui/style.qss
     custom_fonts: {{ file.dir }}/common/fonts/
 
 windows:

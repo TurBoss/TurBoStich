@@ -115,16 +115,23 @@ net     y-pos-fb        udp.1.position-fb           pid.y.feedback      joint.1.
 net     y-vel-fb        udp.1.velocity-fb           pid.y.feedback-deriv
 net     y-vel-cmd       pid.y.output                udp.1.velocity-cmd
 
-#======= Z axis with offset ===============
+#======= Z axis ===============
 
-net     z-comp          comp-limit.out              comp-offset.offset
-net     z-pos-cmd       joint.2.motor-pos-cmd       comp-offset.in
+net     z-pos-cmd       joint.2.motor-pos-cmd       pid.z.command       udp.2.position-cmd
 net     z-vel-cmd-pre   joint.2.vel-cmd             pid.z.command-deriv
-net     z-pos-fb        udp.2.position-fb           comp-offset.fb-in   pid.z.feedback
+net     z-pos-fb        udp.2.position-fb           pid.z.feedback      joint.2.motor-pos-fb
 net     z-vel-fb        udp.2.velocity-fb           pid.z.feedback-deriv
-net     z-pos-cmd-comp  comp-offset.out             pid.z.command       udp.2.position-cmd
-net     z-pos-fb-comp   comp-offset.fb-out          joint.2.motor-pos-fb
 net     z-vel-cmd       pid.z.output                udp.2.velocity-cmd
+
+#======= Z axis with offset ===============
+# net     z-comp          comp-limit.out              comp-offset.offset
+# net     z-pos-cmd       joint.2.motor-pos-cmd       comp-offset.in
+# net     z-vel-cmd-pre   joint.2.vel-cmd             pid.z.command-deriv
+# net     z-pos-fb        udp.2.position-fb           comp-offset.fb-in   pid.z.feedback
+# net     z-vel-fb        udp.2.velocity-fb           pid.z.feedback-deriv
+# net     z-pos-cmd-comp  comp-offset.out             pid.z.command       udp.2.position-cmd
+# net     z-pos-fb-comp   comp-offset.fb-out          joint.2.motor-pos-fb
+# net     z-vel-cmd       pid.z.output                udp.2.velocity-cmd
 
 #===========================================
 
